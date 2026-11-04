@@ -614,9 +614,10 @@ def distinct(
 
     seen: set[Hashable] = set()
     for item in iterable:
-        if _key(item) in seen:
+        item_key = _key(item)
+        if item_key in seen:
             continue
-        seen.add(_key(item))
+        seen.add(item_key)
         yield item
 
 
