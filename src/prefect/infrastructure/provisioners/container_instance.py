@@ -129,7 +129,7 @@ class AzureCLI:
 
         except subprocess.CalledProcessError as e:
             self._console.print(f"Command execution failed: {e}", style="red")
-            return
+            raise
 
 
 class ContainerInstancePushProvisioner:
